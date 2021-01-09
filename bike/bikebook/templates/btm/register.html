@@ -1,0 +1,23 @@
+{% extends 'btm/base.html' %}
+{% block title %} registration {% endblock %}
+{% block content %}
+<div class="container col-md-5">
+	<div class="card mt-5 shadow-lg">
+		<h2 class="bg-info text-white text-center mx-4 mt-3 border rounded p-2">User Registration Form</h2>
+		<div class="card-body bg-white">
+			<form method="POST">
+			  {% csrf_token %}
+			    <table class="table table-borderless mt-1">
+				{% for j in y %}
+				  <tr>
+					 <td>{{j}}</td>
+				  </tr>
+				{% endfor %}
+			    </table>
+			    <input type="checkbox" name="checkbox" style="margin-left: 10px">&nbsp;Accept terms and conditions
+			<input type="submit" name="Register" class="btn btn-block btn-primary mt-2">
+		    </form>
+		</div>
+	</div>
+</div>
+{% endblock %}

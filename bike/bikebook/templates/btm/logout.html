@@ -1,0 +1,11 @@
+{% extends 'btm/base.html' %}
+{% block title %} Logout {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-6 mt-5 mx-auto">
+		<h2 class="bg-secondary text-white text-center mt-2 p-2">logged out</h2>
+		<h4>Are you sure you want to login Again?</h4>
+		<a href="{% url 'log' %}" style="background-color: cadetblue" class="btn text-center">Login Again</a>
+	</div>
+</div>
+{% endblock %}

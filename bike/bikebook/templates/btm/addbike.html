@@ -1,0 +1,25 @@
+{% extends 'btm/base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<body>
+<div class="container col-md-5">
+	<div class="card mt-5 shadow-lg">
+		<h2 class="bg-info text-white text-center mx-4 mt-3 border rounded p-2">Add your bike</h2>
+		<div class="card-body">
+			<form method="POST" enctype="multipart/form-data">
+			  {% csrf_token %}
+			  {{ s.as_p }}
+			    <!-- <table class="table table-borderless mt-1">
+				{% for i in s %}
+				  <tr>
+					 <td>{{i}}</td>
+				  </tr>
+				{% endfor %}
+			    </table> -->
+			<input type="submit" name="submit" class="btn btn-block btn-primary">
+		    </form>
+		</div>
+	</div>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'btm/base.html' %}
+{% block title %} bmw {% endblock %}
+{% block content %}
+{% load static %}
+<div class="container mt-5">
+  <h2 class="text-center bg-danger">new bikes in bmw</h2>
+  <button class="bg-warning my-2 border rounded"><a href="{% url 'bb' %}" style="color: black"><-back</a></button>
+<div class="card-columns">
+  <div class="card">
+    <div class="card-body text-center">
+      <img src="{% static 'images/bmw1.jpg' %}">
+       <div class="card-text">
+      	<button class="bg-info px-2">Booknow</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img src="{% static 'images/bmw2.jpg' %}" class="border rounded">
+      <div class="card-text">
+      	<button class="bg-info px-2">Booknow</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img src="{% static 'images/bmw3.jpg' %}" class="border rounded">
+       <div class="card-text">
+      	<button class="bg-info px-2 mt-2">Booknow</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img src="{% static 'images/bmw4.jpg' %}" class="border rounded">
+       <div class="card-text">
+      	<button class="bg-info px-2 mt-2">Booknow</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img src="{% static 'images/bmw5.jpg' %}" class="border rounded">
+       <div class="card-text">
+      	<button class="bg-info px-2 mt-2">Booknow</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img src="{% static 'images/bmw6.jpg' %}" class="border rounded">
+       <div class="card-text">
+      	<button class="bg-info px-2 mt-4">Booknow</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}

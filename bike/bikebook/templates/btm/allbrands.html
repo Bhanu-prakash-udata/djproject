@@ -1,0 +1,21 @@
+{% extends 'btm/base.html' %}
+{% block title %} viewmore {% endblock %}
+{% block content %}
+<div>
+  <h2 class="bg-info text-white text-center mx-auto mt-3 border rounded p-2 w-50 ">Companies Available At Us</h2>
+</div>
+<div class="container ml-4 row col">
+   {% for brand in b  %}
+<div class="row mx-2 my-2">
+  <div class="col my-2">
+    <div class="card">
+      <div class="card-body">
+        <img class="card-img-top" src="{{ brand.brandlogo.url }}">
+        <a href="#" class="btn  btn-block btn-primary">view bikes</a>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endfor %}
+</div> 
+{% endblock %}

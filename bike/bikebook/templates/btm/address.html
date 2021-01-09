@@ -1,0 +1,25 @@
+{% extends 'btm/base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<body>
+<div class="container col-md-5">
+	<div class="card mt-5 shadow-lg">
+		<h2 class="bg-danger text-white text-center mx-4 mt-3 border rounded p-2">Enter The Shipping Addres</h2>
+		<div class="card-body ">
+			<form method="POST">
+			  {% csrf_token %}
+			    <table class="table table-borderless mt-1">
+				{% for i in f %}
+				  <tr>
+					 <td>{{i}}</td>
+				  </tr>
+				{% endfor %}
+			    </table>
+			<a href="{% url 'allbikes' %}" class="btn btn-danger  text-center"><-back</a>
+			<input type="submit"  style="margin-left :40%;" class="bg-primary px-4">
+		    </form>
+		</div>
+	</div>
+</div>
+</body>
+{% endblock %}

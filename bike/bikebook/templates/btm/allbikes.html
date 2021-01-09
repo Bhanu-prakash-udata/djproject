@@ -1,0 +1,29 @@
+{% extends 'btm/base.html' %}
+{% block title %} registration {% endblock %}
+{% block content %}
+<div>
+  <h2 class="bg-info text-white text-center mx-auto mt-3 border rounded p-2 w-50 ">Latest Bikes Available At Us</h2>
+</div>
+<div class="container ml-4 row col ">
+   {% for i in d %}
+<div class="row">
+  <div class="col">
+    <div class="card" style="width: 20rem;height: 20rem;margin: 5rem;">
+      <div class="card-title" style="height: 40rem;">
+        <img class="card-img-top" src="{{ i.bikefrontimage.url }}">
+      </div>
+      <div class="card-body">
+        <h4 class="card-text text-center">
+        Bikemodel : {{ i.bikemodel }}
+        </h4>
+        <h5 class="card-text text-center">
+        Bikecost :  {{ i.bikecost }}
+        </h5>
+        <a href="{% url 'viewmore' i.id %}" class="btn  btn-block btn-primary">view more</a>
+      </div>
+    </div>
+  </div>
+</div>
+ {% endfor %}
+</div> 
+{% endblock %}
